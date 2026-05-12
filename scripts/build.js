@@ -1,0 +1,10 @@
+const fs = require('fs');
+const path = require('path');
+const root = path.join(__dirname, '..');
+const dist = path.join(root, 'dist');
+fs.rmSync(dist, { recursive: true, force: true });
+fs.mkdirSync(path.join(dist, 'src'), { recursive: true });
+for (const file of ['index.html']) fs.copyFileSync(path.join(root, file), path.join(dist, file));
+for (const file of ['app.js','styles.css']) fs.copyFileSync(path.join(root, 'src', file), path.join(dist, 'src', file));
+fs.writeFileSync(path.join(dist, 'favicon.ico'), '');
+console.log('Built PartPilot to dist/');

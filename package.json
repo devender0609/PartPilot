@@ -1,0 +1,13 @@
+{
+  "name": "partpilot-mvp",
+  "version": "3.1.0",
+  "private": true,
+  "description": "PartPilot - simplified guided triage with clear buy status and no confusing readiness percentages",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev.js"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
